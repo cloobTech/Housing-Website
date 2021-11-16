@@ -1,6 +1,20 @@
-const Button = ({ name, bg, color,onClick, addItems }) => {
-  return <button onClick = {() => onClick (addItems)} style={{ backgroundColor: bg, color: color }}>{name}</button>;
+import React from "react";
+
+const Button = ({ btnColor, type, btnSize, children, color }) => {
+  const checkBtnClasses = ["btn--primary", "btn--secondary", "btn--outline"];
+  const checkBtnSizes = ["btn--medium", "btn--large", "btn--block"];
+
+  return (
+    <button
+      style={{ color: color }}
+      className={`btn ${
+        checkBtnClasses.includes(btnColor) ? btnColor : checkBtnClasses[0]
+      } ${checkBtnSizes.includes(btnSize) ? btnSize : checkBtnSizes[0]}`}
+      type={type}
+    >
+      {children}
+    </button>
+  );
 };
 
 export default Button;
-
