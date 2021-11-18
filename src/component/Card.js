@@ -13,6 +13,8 @@ const Card = ({
   btnText,
   src,
   path,
+  id,
+  ShowCaseHandler,
 }) => {
   const customBadge = ["available", "un-available"];
 
@@ -35,7 +37,7 @@ const Card = ({
       <div>{dismiss}</div>
       {/* img   */}
       <div className={card.img}>
-        <img src={src} />
+        <img src={src} alt={title} />
       </div>
       <div className={card.body}>
         {/* title */}
@@ -46,7 +48,9 @@ const Card = ({
         <h3 className={card.price}>{price}</h3>
         {/* button */}
         <Link to={path}>
-          <Button btnSize="btn--block">{btnText}</Button>
+          <Button onClick={() => ShowCaseHandler(id)} btnSize="btn--block">
+            {btnText}
+          </Button>
         </Link>
       </div>
     </div>

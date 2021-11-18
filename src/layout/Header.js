@@ -8,6 +8,7 @@ const Header = ({ children }) => {
   const [mobileView, setMobileView] = useState(false);
 
   // onscroll function to add and remove a navbar
+
   window.addEventListener("scroll", (e) => {
     const header = document.getElementById("header");
     if (window.scrollY >= 150) {
@@ -17,6 +18,13 @@ const Header = ({ children }) => {
     }
   });
 
+  // useEffect(() => {
+
+  //   return () => {
+  //     // cleanup
+  //   };
+  // }, [
+  // ]);
   // function to hide and show nav links/set or update MobileView
 
   const checKViewSize = (e) => {
@@ -45,8 +53,10 @@ const Header = ({ children }) => {
       {children}
       {/* {logo} */}
       <div className={header.container}>
-        <Link to="/" className={header.logo}>
-          <div>CLOOB-HOMES</div>
+        <Link to="/">
+          <div className={header.logo}>
+            CLOOB <span>HOMES</span>
+          </div>
         </Link>
 
         {mobileView && (

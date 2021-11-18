@@ -1,8 +1,9 @@
 import React from "react";
 import Body from "../layout/Body";
+import Footer from "../layout/Footer";
 import home from "./home.module.css";
 
-const Home = ({ children, title, description, address }) => {
+const Home = () => {
   return (
     <>
       <div className={home.home}>
@@ -10,8 +11,10 @@ const Home = ({ children, title, description, address }) => {
           <h1>CLOOB HOMES</h1>
           <p>...your number one housing agency</p>
         </div>
+        <div className={home.blend}></div>
       </div>
       <Body></Body>
+      <Footer></Footer>
     </>
   );
 };

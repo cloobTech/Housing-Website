@@ -5,12 +5,32 @@
   align-items: center;
   background-color: #f3f3f3;
 }
+
+.heading {
+  margin: 1rem 0 0 0;
+  font-size: 2rem;
+  color: #444;
+  text-align: center;
+}
+
+.heading span {
+  color: var(--primaryColor);
+}
 .container {
   width: 80%;
   margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
+  flex-wrap: wrap;
   /* margin: 2rem 0 0 0; */
+}
+
+.more {
+  display: flex;
+  flex-direction: column;
+  margin: 0.25rem 0 1.5rem 0;
+  color: #444;
+  text-align: center;
 }
 
 @media screen and (max-width: 974px) {
