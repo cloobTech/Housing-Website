@@ -9,7 +9,6 @@ const Home = () => {
       <div className={home.home}>
         <div className={home.title}>
           <h1>CLOOB HOMES</h1>
-          <p>...your number one housing agency</p>
         </div>
         <div className={home.blend}></div>
       </div>
