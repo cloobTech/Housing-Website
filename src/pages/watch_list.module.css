@@ -1,0 +1,13 @@
+.background {
+  height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(45deg, #444, #333, #222);
+  position: fixed;
+  padding: 3.2rem;
+}
+
+.h1 {
+  margin: 15rem 0 0 0;
+  color: #fefefe;
+  text-align: center;
+}

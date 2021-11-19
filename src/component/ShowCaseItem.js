@@ -4,21 +4,59 @@ import Button from "./Button";
 import { FaTimesCircle } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-const ShowCaseItem = ({
-  dismiss,
-  children,
-  description,
-  houseName,
-  address,
-  badge,
-  price,
-  title,
-}) => {
+const ShowCaseItem = (props) => {
+  const { src, description, address, badge, price, title, id } = props;
+
   const customBadge = ["available", "un-available"];
+
+  const addToWatchListHandler = (e) => {
+    // fetch("https://cloob-homes-default-rtdb.firebaseio.com",
+    //  {
+    //   method: "Post",
+    //   headers: {
+    //     Accept: "Application/json, text/plain, */*",
+    //     "Content-type": "application/json",
+    //   },
+    //   body: JSON.stringify({
+    //     src: src,
+    //     description: description,
+    //     address: address,
+    //     price: price,
+    //     title: title,
+    //     id: id,
+    //   }),
+    // })
+    //   .then((res) => res.json)
+    //   .then((data) => console.log(data));
+
+    fetch(
+      "https://cloob-homes-default-rtdb.firebaseio.com/cloob-homes.json"
+      // , {
+      //   method: "Post",
+      //   headers: {
+      //     Accept: "Application/json, text/plain, */*",
+      //     "Content-type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     src: src,
+      //     description: description,
+      //     address: address,
+      //     price: price,
+      //     title: title,
+      //     id: id,
+      //   }),
+      // }
+    )
+      .then((res) => res.json())
+      .then((hey) => console.log(hey));
+  };
 
   return (
     <div className={showcaseitem.container}>
-      <div className={showcaseitem.showcaseImage}>
+      <div
+        className={showcaseitem.showcaseImage}
+        style={{ backgroundImage: `url(${src})` }}
+      >
         {/* <div className={showcaseitem.blend}></div> */}
       </div>
       <div className={showcaseitem.houseDetailsContainer}>
@@ -31,13 +69,16 @@ const ShowCaseItem = ({
               <FaTimesCircle />
             </div>
           </Link>
-          <h3>{houseName}</h3>
+          <h3>{title}</h3>
           <address>{address}</address>
           <p>{description}</p>
           <h2 className={showcaseitem.price}>{price}</h2>
           <div className={showcaseitem.buttons}>
             <Button btnColor="btn--secondary">Make payment</Button>
-            <Button color="#fff" btnColor="btn--outline">
+            <Button
+              btnColor="btn--outline"
+              onClick={() => addToWatchListHandler(id)}
+            >
               Add to watch list
             </Button>
           </div>

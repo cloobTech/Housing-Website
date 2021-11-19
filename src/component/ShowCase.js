@@ -2,11 +2,14 @@ import React from "react";
 import showcase from "./showcase.module.css";
 import ShowCaseItem from "./ShowCaseItem";
 
-const ShowCase = ({ children }) => {
+const ShowCase = (props) => {
+  const { children, filterShowCaseData } = props;
   return (
     <div className={showcase.showcase}>
       {children}
-      <ShowCaseItem></ShowCaseItem>
+      {filterShowCaseData.map((eachData) => {
+        return <ShowCaseItem key={eachData.id} {...eachData}></ShowCaseItem>;
+      })}
     </div>
   );
 };

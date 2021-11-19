@@ -66,13 +66,13 @@ const Header = ({ children }) => {
             <nav className={header.nav}>
               <ul className={header.ul}>
                 <Link to="/services" className={header.link}>
-                  <li>SERVICES</li>
+                  <li onClick={() => setMobileView(false)}>SERVICES</li>
                 </Link>
                 <Link to="/contact" className={header.link}>
-                  <li>CONTACT-US</li>
+                  <li onClick={() => setMobileView(false)}>CONTACT-US</li>
                 </Link>
                 <Link to="watch_list" className={header.link}>
-                  <li>WATCH-LIST</li>
+                  <li onClick={() => setMobileView(false)}>WATCH-LIST</li>
                 </Link>
               </ul>
               <input

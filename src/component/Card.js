@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import card from "./card.module.css";
 import Button from "./Button";
 import { Link } from "react-router-dom";
@@ -47,6 +46,8 @@ const Card = ({
         {/* badge */}
         <h3 className={card.price}>{price}</h3>
         {/* button */}
+      </div>
+      <div className={card.button}>
         <Link to={path}>
           <Button onClick={() => ShowCaseHandler(id)} btnSize="btn--block">
             {btnText}

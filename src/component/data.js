@@ -7,7 +7,9 @@ export const data = [
     price: "$40,000",
     btnText: "View More",
     src: "asset/house-4.jpg",
-    path: "/",
+    path: "/services",
+    description:
+      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
   },
 
   {
@@ -18,7 +20,9 @@ export const data = [
     price: "$80,000",
     btnText: "View More",
     src: "asset/house-1.jpg",
-    path: "/",
+    path: "/services",
+    description:
+      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
   },
 
   {
@@ -29,7 +33,9 @@ export const data = [
     price: "$65,000",
     btnText: "View More",
     src: "asset/house-6.jpg",
-    path: "/",
+    path: "/services",
+    description:
+      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
   },
 
   {
@@ -40,7 +46,9 @@ export const data = [
     price: "$72,000",
     btnText: "View More",
     src: "asset/house-3.jpg",
-    path: "/",
+    path: "/services",
+    description:
+      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
   },
 
   {
@@ -51,7 +59,9 @@ export const data = [
     price: "$70,000",
     btnText: "View More",
     src: "asset/house-2.jpg",
-    path: "/",
+    path: "/services",
+    description:
+      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
   },
 
   {
@@ -63,5 +73,7 @@ export const data = [
     btnText: "View More",
     src: "asset/house-5.jpg",
     path: "/services",
+    description:
+      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
   },
 ];
