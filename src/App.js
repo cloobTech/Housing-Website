@@ -6,6 +6,8 @@ import Contact from "./pages/Contact";
 import Home from "./pages/Home";
 import WatchList from "./pages/Watch_List";
 import { data } from "./component/data";
+import Loading from "./pages/Loading";
+import Error from "./pages/Error";
 
 const App = () => {
   const [showCaseData, setShowCaseData] = useState(data);
@@ -27,7 +29,6 @@ const App = () => {
   return (
     <div>
       <Header></Header>
-
       <Switch>
         <Route path="/" exact>
           <Home ShowCaseHandler={ShowCaseHandler}></Home>
@@ -41,6 +42,12 @@ const App = () => {
         </Route>
         <Route path="/watch_list">
           <WatchList></WatchList>
+        </Route>
+        <Route path="/error" exact>
+          <Error></Error>
+        </Route>
+        <Route>
+          <Loading></Loading>
         </Route>
       </Switch>
     </div>

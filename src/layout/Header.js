@@ -53,9 +53,10 @@ const Header = ({ children }) => {
       {children}
       {/* {logo} */}
       <div className={header.container}>
-        <Link to="/">
-          <div className={header.logo}>
-            CLOOB <span>HOMES</span>
+        <Link to="/" className={header.logoLink}>
+          <div className={header.logo} onClick={() => setMobileView(false)}>
+            <div className={header.logoCloob}>CLOOB</div>
+            <div className={header.logoHome}>HOMES</div>
           </div>
         </Link>
 

@@ -1,56 +1,37 @@
-import React from "react";
 import showcaseitem from "./showcaseitem.module.css";
 import Button from "./Button";
 import { FaTimesCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 
 const ShowCaseItem = (props) => {
   const { src, description, address, badge, price, title, id } = props;
+  const history = useHistory();
 
   const customBadge = ["available", "un-available"];
 
   const addToWatchListHandler = (e) => {
-    // fetch("https://cloob-homes-default-rtdb.firebaseio.com",
-    //  {
-    //   method: "Post",
-    //   headers: {
-    //     Accept: "Application/json, text/plain, */*",
-    //     "Content-type": "application/json",
-    //   },
-    //   body: JSON.stringify({
-    //     src: src,
-    //     description: description,
-    //     address: address,
-    //     price: price,
-    //     title: title,
-    //     id: id,
-    //   }),
-    // })
-    //   .then((res) => res.json)
-    //   .then((data) => console.log(data));
+    fetch("https://cloob-homes-default-rtdb.firebaseio.com/cloob-homes.json", {
+      method: "Post",
+      headers: {
+        Accept: "Application/json, text/plain, */*",
+        "Content-type": "application/json",
+      },
+      body: JSON.stringify({
+        src: src,
 
-    fetch(
-      "https://cloob-homes-default-rtdb.firebaseio.com/cloob-homes.json"
-      // , {
-      //   method: "Post",
-      //   headers: {
-      //     Accept: "Application/json, text/plain, */*",
-      //     "Content-type": "application/json",
-      //   },
-      //   body: JSON.stringify({
-      //     src: src,
-      //     description: description,
-      //     address: address,
-      //     price: price,
-      //     title: title,
-      //     id: id,
-      //   }),
-      // }
-    )
+        description: description,
+        address: address,
+        price: price,
+        title: title,
+        id: id,
+      }),
+    })
       .then((res) => res.json())
-      .then((hey) => console.log(hey));
+      .then((data) => history.replace("./"))
+      .catch((err) => history.push("./error"));
   };
 
+  console.log("testing...");
   return (
     <div className={showcaseitem.container}>
       <div

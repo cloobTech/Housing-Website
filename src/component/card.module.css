@@ -62,12 +62,13 @@
   position: absolute;
   bottom: 0;
   width: 100%;
-  padding: 0 01rem;
+  padding: 0 0.75rem;
   margin: 0.75rem 0;
 }
 
 @media screen and (max-width: 946px) {
   .card {
     width: 100%;
+    margin: 1.5rem 0;
   }
 }

@@ -1,0 +1,11 @@
+.table {
+  display: flex;
+  background-color: #d3d3d3;
+  width: 80%;
+  margin: auto;
+  /* min-height: 400px; */
+}
+
+.table div {
+  background-color: #e3e3e3;
+}

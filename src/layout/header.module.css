@@ -19,19 +19,26 @@
   align-items: center;
   position: relative;
 }
+.logoLink {
+  text-decoration: none;
+}
 
 .logo {
   background-color: var(--primaryColor);
-  padding: 0.25rem 0 0.5rem 0.25rem;
+  padding: 0.25rem;
   border-radius: 0.25rem;
+  color: #fff;
+  display: flex;
+  text-decoration: none;
 }
 
-.logo span {
-  /* display: inline-block; */
+.logoHome {
+  text-decoration: none;
   background-color: var(--secondaryColor);
   height: 100%;
-  padding: 0.25rem 0.25rem 0.5rem 0.25rem;
-  border-radius: 0 0.25rem 0.25rem 0;
+  padding: 0 0.25rem;
+  border-radius: 0.25rem;
+  margin: 0 0 0 0.25rem;
 }
 
 .nav {
@@ -50,12 +57,6 @@
   margin: 0 0.75rem 0 0;
 }
 
-.logo {
-  color: #fff;
-  text-decoration: none;
-  display: inline-block;
-}
-
 .link:hover {
   color: var(--secondaryColor);
 }
@@ -70,16 +71,14 @@
 .icons {
   position: absolute;
   right: 0;
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
+  cursor: pointer;
+  margin: 0.5rem 0 0 0;
 }
 
 @media screen and (max-width: 845px) {
   .container,
   .nav,
   .ul {
-    /* display: block;
-     */
     flex-direction: column;
     width: 100%;
   }
@@ -87,8 +86,7 @@
   .container {
     align-items: flex-start;
     justify-content: flex-start;
-    padding: 2rem 0;
-
+    padding: 1rem 0;
     width: 80%;
   }
 
@@ -99,7 +97,7 @@
   .ul {
     justify-content: center;
     width: 100%;
-    margin: 0.25rem 0;
+    margin: 0.75rem 0;
   }
 
   .ul .link {
@@ -109,7 +107,6 @@
   .ul .link li {
     display: block;
     text-align: center;
-    /* margin: 0.25rem 0; */
     padding: 1rem 0;
     width: 100%;
     height: auto;

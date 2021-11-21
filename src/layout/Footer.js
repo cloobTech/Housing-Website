@@ -41,10 +41,10 @@ const Footer = () => {
           </div>
           <div>
             <h2>Social Media</h2>
-            <p>Facebook_cloobHomes</p>
-            <p>Twitter_cloobHomes</p>
-            <p>Whatsapp_cloobHomes</p>
-            <p>YouTube_cloobHomes</p>
+            <p>Facebook</p>
+            <p>Twitter</p>
+            <p>Whatsapp</p>
+            <p>YouTube</p>
           </div>
           <div>
             <h2>Extras</h2>

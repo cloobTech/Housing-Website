@@ -12,6 +12,11 @@
   --secondaryColor: rgb(226, 67, 101);
 }
 
+Link {
+  cursor: pointer;
+  text-decoration: none;
+}
+
 .btn {
   padding: 0.5rem 1rem;
   outline: none;
