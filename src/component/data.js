@@ -10,6 +10,7 @@ export const data = [
     path: "/services",
     description:
       "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
+    database: false,
   },
 
   {
@@ -23,6 +24,7 @@ export const data = [
     path: "/services",
     description:
       "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
+    database: false,
   },
 
   {
@@ -36,6 +38,7 @@ export const data = [
     path: "/services",
     description:
       "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
+    database: false,
   },
 
   {
@@ -49,6 +52,7 @@ export const data = [
     path: "/services",
     description:
       "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
+    database: false,
   },
 
   {
@@ -62,6 +66,7 @@ export const data = [
     path: "/services",
     description:
       "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
+    database: false,
   },
 
   {
@@ -75,5 +80,6 @@ export const data = [
     path: "/services",
     description:
       "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
+    database: false,
   },
 ];

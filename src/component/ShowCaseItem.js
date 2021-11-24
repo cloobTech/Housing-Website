@@ -4,12 +4,43 @@ import { FaTimesCircle } from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
 
 const ShowCaseItem = (props) => {
-  const { src, description, address, badge, price, title, id } = props;
+  const {
+    src,
+    description,
+    address,
+    badge,
+    price,
+    title,
+    id,
+    database,
+    showCaseData,
+    setShowCaseData,
+    store,
+    setStore,
+  } = props;
   const history = useHistory();
-
   const customBadge = ["available", "un-available"];
 
   const addToWatchListHandler = (e) => {
+    // store.map((eachData) => {
+    //   if (eachData.id === e) {
+    //     if (eachData.database) {
+    //       return;
+    //     }
+    //     return;
+    //   }
+    //   return;
+    // });
+    // console.log("final test");
+
+    // setStore(
+    //   store.map((eachData) => {
+    //     const test =
+    //       eachData.id === e ? { ...eachData, database: true } : eachData;
+    //     return test;
+    //   })
+    // );
+
     fetch("https://cloob-homes-default-rtdb.firebaseio.com/cloob-homes.json", {
       method: "Post",
       headers: {
@@ -18,7 +49,6 @@ const ShowCaseItem = (props) => {
       },
       body: JSON.stringify({
         src: src,
-
         description: description,
         address: address,
         price: price,
@@ -31,7 +61,6 @@ const ShowCaseItem = (props) => {
       .catch((err) => history.push("./error"));
   };
 
-  console.log("testing...");
   return (
     <div className={showcaseitem.container}>
       <div

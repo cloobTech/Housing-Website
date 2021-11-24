@@ -12,6 +12,7 @@ import Error from "./pages/Error";
 const App = () => {
   const [showCaseData, setShowCaseData] = useState(data);
   const [filterShowCaseData, setFilterShowcaseData] = useState([]);
+  const [store, setStore] = useState([]);
 
   const ShowCaseHandler = (id) => {
     setFilterShowcaseData(
@@ -21,9 +22,14 @@ const App = () => {
 
   useEffect(() => {
     ShowCaseHandler();
-    // return () => {
-    //   cleanup
-    // }
+  }, []);
+
+  const storeHandler = () => {
+    setStore(showCaseData);
+  };
+
+  useEffect(() => {
+    storeHandler();
   }, []);
 
   return (
@@ -34,7 +40,13 @@ const App = () => {
           <Home ShowCaseHandler={ShowCaseHandler}></Home>
         </Route>
         <Route path="/services">
-          <ShowCase filterShowCaseData={filterShowCaseData}></ShowCase>
+          <ShowCase
+            filterShowCaseData={filterShowCaseData}
+            setShowCaseData={setShowCaseData}
+            showCaseData={showCaseData}
+            store={store}
+            setStore={setStore}
+          ></ShowCase>
           {/* <Services></Services> */}
         </Route>
         <Route path="/contact">

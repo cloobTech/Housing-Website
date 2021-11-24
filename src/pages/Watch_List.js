@@ -3,6 +3,7 @@ import watchlist from "./watch_list.module.css";
 import { useHistory } from "react-router-dom";
 import Loading from "./Loading";
 import Table from "../component/Table";
+import Row from "../component/Row";
 
 const Watch_List = ({ children }) => {
   const [watchList, setWatchList] = useState([]);
@@ -31,24 +32,24 @@ const Watch_List = ({ children }) => {
     console.log("gotten data");
   }
 
-  console.log(watchList);
-
   return (
     <>
       {children}
-      {watchList.map((eachData) => {
-        if (eachData) {
-          return <Table {...eachData}></Table>;
-        } else if (!eachData) {
-          return (
-            <div className={watchlist.background}>
-              <h1 className={watchlist.h1}>
-                YOU HAVE NOTHING ADDED TO YOUR WATCH_LIST
-              </h1>
-            </div>
-          );
-        }
-      })}
+      <Table>
+        {watchList.map((eachData) => {
+          if (eachData) {
+            return <Row key={eachData.id} {...eachData}></Row>;
+          } else {
+            return (
+              <div className={watchlist.background}>
+                <h1 className={watchlist.h1}>
+                  YOU HAVE NOTHING ADDED TO YOUR WATCH_LIST
+                </h1>
+              </div>
+            );
+          }
+        })}
+      </Table>
     </>
   );
 };

@@ -1,14 +1,13 @@
 import React from "react";
 import table from "./table.module.css";
+import Row from "./Row";
 
-const Table = ({ children, title, address, price }) => {
+const Table = ({ children }) => {
   return (
-    <div className={table.table}>
-      {children}
-      <div>{title}</div>
-      <div>{address}</div>
-      <div>{price}</div>
-    </div>
+    <>
+      {" "}
+      <div className={table.table}>{children}</div>
+    </>
   );
 };
 

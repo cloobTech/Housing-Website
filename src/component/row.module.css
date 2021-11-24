@@ -1,0 +1,13 @@
+.container {
+  display: flex;
+  margin: 0 0 0.25rem 0;
+  background-color: #f3f3f3;
+  justify-content: space-between;
+  color: #737373;
+  padding: 0.5rem 0.25rem;
+}
+
+.container div {
+  margin: 0 0 0.75rem 0;
+  background-color: red;
+}
