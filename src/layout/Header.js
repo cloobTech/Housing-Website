@@ -1,3 +1,5 @@
+/** @format */
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import header from "./header.module.css";
@@ -8,16 +10,24 @@ const Header = ({ children }) => {
   const [mobileView, setMobileView] = useState(false);
 
   // onscroll function to add and remove a navbar
+
   window.addEventListener("scroll", (e) => {
     const header = document.getElementById("header");
-    if (window.scrollY >= 150) {
+    if (window.innerWidth <= 700) {
+      header.style.backgroundColor = "var(--primaryColor)";
+    } else if (window.scrollY >= 150) {
       header.style.backgroundColor = "var(--primaryColor)";
     } else if (window.scrollY <= 334) {
       header.style.backgroundColor = "transparent";
     }
   });
 
-  // function to hide and show nav links/set or update MobileView
+  window.addEventListener("load", () => {
+    const header = document.getElementById("header");
+    if (window.innerWidth <= 700) {
+      header.style.backgroundColor = "var(--primaryColor)";
+    }
+  });
 
   const checKViewSize = (e) => {
     if (window.innerWidth >= "984") {
@@ -45,8 +55,11 @@ const Header = ({ children }) => {
       {children}
       {/* {logo} */}
       <div className={header.container}>
-        <Link to="/" className={header.logo}>
-          <div>CLOOB-HOMES</div>
+        <Link to="/" className={header.logoLink}>
+          <div className={header.logo} onClick={() => setMobileView(false)}>
+            <div className={header.logoCloob}>CLOOB</div>
+            <div className={header.logoHome}>HOMES</div>
+          </div>
         </Link>
 
         {mobileView && (
@@ -56,13 +69,13 @@ const Header = ({ children }) => {
             <nav className={header.nav}>
               <ul className={header.ul}>
                 <Link to="/services" className={header.link}>
-                  <li>SERVICES</li>
+                  <li onClick={() => setMobileView(false)}>SERVICES</li>
                 </Link>
                 <Link to="/contact" className={header.link}>
-                  <li>CONTACT-US</li>
+                  <li onClick={() => setMobileView(false)}>CONTACT-US</li>
                 </Link>
                 <Link to="watch_list" className={header.link}>
-                  <li>WATCH-LIST</li>
+                  <li onClick={() => setMobileView(false)}>WATCH-LIST</li>
                 </Link>
               </ul>
               <input

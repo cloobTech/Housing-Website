@@ -1,21 +1,43 @@
-import React from "react";
-import showcase from "./showcase.module.css";
+/** @format */
 
-const ShowCase = ({ children, description, houseName, address, title }) => {
+import React, { useEffect } from "react";
+import showcase from "./showcase.module.css";
+import ShowCaseItem from "./ShowCaseItem";
+
+const ShowCase = (props) => {
+  const {
+    children,
+    filterShowCaseData,
+    setShowCaseData,
+    showCaseData,
+    setFilterShowCaseData,
+  } = props;
+
+  const show = () => {
+    const fill = JSON.parse(localStorage.getItem("item"));
+
+    setFilterShowCaseData([...fill]);
+  };
+
+  useEffect(() => {
+    show();
+  }, []);
   return (
-    <div className={showcase.showcase}>
-      {children}
-      <div className={showcase.container}>
-        <div className={showcase.title}>
-          <h1>{title}</h1>
-        </div>
-        <div className={showcase.descriptionContainer}>
-          <h3>{houseName}</h3>
-          <address>{address}</address>
-          <p>{description}</p>
-        </div>
+    <>
+      <div className={showcase.showcase}>
+        {children}
+        {filterShowCaseData.map((eachData) => {
+          return (
+            <ShowCaseItem
+              key={eachData.id}
+              {...eachData}
+              setShowCaseData={setShowCaseData}
+              showCaseData={showCaseData}
+            ></ShowCaseItem>
+          );
+        })}
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,6 +1,8 @@
+/** @format */
+
 .home {
   height: 100vh;
-  background-image: url("../asset/house-2.jpg");
+  background-image: url("../background-image/house.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,4 +32,24 @@
   padding: 0.25rem 0.5rem;
   border-radius: 0.25rem;
   margin: 0.25rem 0;
+  color: #f3f3f3;
+}
+
+.blend {
+  position: absolute;
+  bottom: 0;
+  height: 160px;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    transparent,
+    rgb(243, 240, 240, 0.5),
+    #f3f3f3
+  );
+}
+
+@media screen and (max-width: 800px) {
+  .title h1 {
+    font-size: 32px;
+  }
 }

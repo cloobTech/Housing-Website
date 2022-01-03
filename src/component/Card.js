@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+/** @format */
+
 import card from "./card.module.css";
 import Button from "./Button";
 import { Link } from "react-router-dom";
@@ -13,18 +14,10 @@ const Card = ({
   btnText,
   src,
   path,
+  id,
+  ShowCaseHandler,
 }) => {
   const customBadge = ["available", "un-available"];
-
-  // state function to set the badge background color pending on its status (availablility of unavailabilty)
-  // const [badgeStatus, setBadgeStatus] = useState(true);
-
-  // const checkBadgeStatus = () => {
-  //   if (badge === "un-available") {
-  //     setBadgeStatus(false);
-  //   }
-  // };
-  // checkBadgeStatus();
 
   return (
     <div className={`${card.card} `}>
@@ -35,7 +28,7 @@ const Card = ({
       <div>{dismiss}</div>
       {/* img   */}
       <div className={card.img}>
-        <img src={src} />
+        <img src={src} alt={title} />
       </div>
       <div className={card.body}>
         {/* title */}
@@ -45,8 +38,12 @@ const Card = ({
         {/* badge */}
         <h3 className={card.price}>{price}</h3>
         {/* button */}
+      </div>
+      <div className={card.button}>
         <Link to={path}>
-          <Button btnSize="btn--block">{btnText}</Button>
+          <Button onClick={() => ShowCaseHandler(id)} btnSize="btn--block">
+            {btnText}
+          </Button>
         </Link>
       </div>
     </div>
