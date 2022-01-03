@@ -1,3 +1,5 @@
+/** @format */
+
 import card from "./card.module.css";
 import Button from "./Button";
 import { Link } from "react-router-dom";
@@ -16,16 +18,6 @@ const Card = ({
   ShowCaseHandler,
 }) => {
   const customBadge = ["available", "un-available"];
-
-  // state function to set the badge background color pending on its status (availablility of unavailabilty)
-  // const [badgeStatus, setBadgeStatus] = useState(true);
-
-  // const checkBadgeStatus = () => {
-  //   if (badge === "un-available") {
-  //     setBadgeStatus(false);
-  //   }
-  // };
-  // checkBadgeStatus();
 
   return (
     <div className={`${card.card} `}>

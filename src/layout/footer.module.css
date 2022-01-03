@@ -1,3 +1,5 @@
+/** @format */
+
 .container {
   width: 100%;
   height: auto;
@@ -84,6 +86,7 @@
   }
   .inputContainer {
     flex-direction: column;
+    width: 100%;
   }
 
   .input {

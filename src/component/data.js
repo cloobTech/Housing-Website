@@ -1,3 +1,5 @@
+/** @format */
+
 export const data = [
   {
     id: 1,
@@ -7,10 +9,8 @@ export const data = [
     price: "$40,000",
     btnText: "View More",
     src: "asset/house-4.jpg",
-    path: "/services",
-    description:
-      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
-    database: false,
+    path: "/showcase",
+    description: "A great relaxation resort for a small family...",
   },
 
   {
@@ -21,10 +21,8 @@ export const data = [
     price: "$80,000",
     btnText: "View More",
     src: "asset/house-1.jpg",
-    path: "/services",
-    description:
-      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
-    database: false,
+    path: "/showcase",
+    description: "A beautiful hide-out for a large family, 20 rooms...",
   },
 
   {
@@ -35,10 +33,8 @@ export const data = [
     price: "$65,000",
     btnText: "View More",
     src: "asset/house-6.jpg",
-    path: "/services",
-    description:
-      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
-    database: false,
+    path: "/showcase",
+    description: "A sweet resort for lovers...",
   },
 
   {
@@ -49,10 +45,8 @@ export const data = [
     price: "$72,000",
     btnText: "View More",
     src: "asset/house-3.jpg",
-    path: "/services",
-    description:
-      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
-    database: false,
+    path: "/showcase",
+    description: "You will certainly love the glass view...",
   },
 
   {
@@ -63,10 +57,9 @@ export const data = [
     price: "$70,000",
     btnText: "View More",
     src: "asset/house-2.jpg",
-    path: "/services",
+    path: "/showcase",
     description:
-      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
-    database: false,
+      "Close to the miami beach. This apartment presents a warm place...Close to the miami beach. This apartment presents a warm place...Close to the miami beach. This apartment presents a warm place...Close to the miami beach. This apartment presents a warm place...Close to the miami beach. This apartment presents a warm place...Close to the miami beach. This apartment presents a warm place...vv ",
   },
 
   {
@@ -77,9 +70,7 @@ export const data = [
     price: "$80,000",
     btnText: "View More",
     src: "asset/house-5.jpg",
-    path: "/services",
-    description:
-      "Lrem the way ima feeling lorem this uajsnd thfedeg theffd thhafd thbvfbdldf bkkdkdkbb kcdkjjjd,",
-    database: false,
+    path: "/showcase",
+    description: "You love nature??? say no more...  ",
   },
 ];

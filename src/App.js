@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+/** @format */
+
+import React, { useState } from "react";
 import { Route, Switch } from "react-router";
 import ShowCase from "./component/ShowCase";
 import Header from "./layout/Header";
@@ -8,29 +10,17 @@ import WatchList from "./pages/Watch_List";
 import { data } from "./component/data";
 import Loading from "./pages/Loading";
 import Error from "./pages/Error";
+import Services from "./pages/Services";
 
 const App = () => {
   const [showCaseData, setShowCaseData] = useState(data);
-  const [filterShowCaseData, setFilterShowcaseData] = useState([]);
-  const [store, setStore] = useState([]);
+  const [filterShowCaseData, setFilterShowCaseData] = useState([]);
 
   const ShowCaseHandler = (id) => {
-    setFilterShowcaseData(
-      [...showCaseData].filter((eachData) => id === eachData.id)
-    );
+    const filter = [...showCaseData].filter((eachData) => id === eachData.id);
+
+    localStorage.setItem("item", JSON.stringify(filter));
   };
-
-  useEffect(() => {
-    ShowCaseHandler();
-  }, []);
-
-  const storeHandler = () => {
-    setStore(showCaseData);
-  };
-
-  useEffect(() => {
-    storeHandler();
-  }, []);
 
   return (
     <div>
@@ -39,15 +29,16 @@ const App = () => {
         <Route path="/" exact>
           <Home ShowCaseHandler={ShowCaseHandler}></Home>
         </Route>
-        <Route path="/services">
+        <Route path="/showcase">
           <ShowCase
             filterShowCaseData={filterShowCaseData}
             setShowCaseData={setShowCaseData}
+            setFilterShowCaseData={setFilterShowCaseData}
             showCaseData={showCaseData}
-            store={store}
-            setStore={setStore}
           ></ShowCase>
-          {/* <Services></Services> */}
+        </Route>
+        <Route path="/services">
+          <Services></Services>
         </Route>
         <Route path="/contact">
           <Contact></Contact>

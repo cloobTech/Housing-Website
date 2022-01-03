@@ -1,47 +1,17 @@
+/** @format */
+
 import showcaseitem from "./showcaseitem.module.css";
 import Button from "./Button";
 import { FaTimesCircle } from "react-icons/fa";
 import { Link, useHistory } from "react-router-dom";
 
 const ShowCaseItem = (props) => {
-  const {
-    src,
-    description,
-    address,
-    badge,
-    price,
-    title,
-    id,
-    database,
-    showCaseData,
-    setShowCaseData,
-    store,
-    setStore,
-  } = props;
+  const { src, description, address, badge, price, title, id } = props;
   const history = useHistory();
   const customBadge = ["available", "un-available"];
 
   const addToWatchListHandler = (e) => {
-    // store.map((eachData) => {
-    //   if (eachData.id === e) {
-    //     if (eachData.database) {
-    //       return;
-    //     }
-    //     return;
-    //   }
-    //   return;
-    // });
-    // console.log("final test");
-
-    // setStore(
-    //   store.map((eachData) => {
-    //     const test =
-    //       eachData.id === e ? { ...eachData, database: true } : eachData;
-    //     return test;
-    //   })
-    // );
-
-    fetch("https://cloob-homes-default-rtdb.firebaseio.com/cloob-homes.json", {
+    fetch("https://cloob-home-default-rtdb.firebaseio.com/cloob.json", {
       method: "Post",
       headers: {
         Accept: "Application/json, text/plain, */*",
@@ -66,9 +36,7 @@ const ShowCaseItem = (props) => {
       <div
         className={showcaseitem.showcaseImage}
         style={{ backgroundImage: `url(${src})` }}
-      >
-        {/* <div className={showcaseitem.blend}></div> */}
-      </div>
+      ></div>
       <div className={showcaseitem.houseDetailsContainer}>
         <div className={showcaseitem.houseDetails}>
           <div className={showcaseitem.badge}>

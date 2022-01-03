@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from "react";
+/** @format */
+
+import React, { useEffect } from "react";
 import showcase from "./showcase.module.css";
 import ShowCaseItem from "./ShowCaseItem";
 
@@ -8,10 +10,18 @@ const ShowCase = (props) => {
     filterShowCaseData,
     setShowCaseData,
     showCaseData,
-    store,
-    setStore,
+    setFilterShowCaseData,
   } = props;
 
+  const show = () => {
+    const fill = JSON.parse(localStorage.getItem("item"));
+
+    setFilterShowCaseData([...fill]);
+  };
+
+  useEffect(() => {
+    show();
+  }, []);
   return (
     <>
       <div className={showcase.showcase}>
@@ -23,8 +33,6 @@ const ShowCase = (props) => {
               {...eachData}
               setShowCaseData={setShowCaseData}
               showCaseData={showCaseData}
-              store={store}
-              setStore={setStore}
             ></ShowCaseItem>
           );
         })}

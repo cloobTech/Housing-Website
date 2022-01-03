@@ -1,6 +1,8 @@
+/** @format */
+
 .home {
   height: 100vh;
-  background-image: url("../asset/house-2.jpg");
+  background-image: url("../background-image/house.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -44,4 +46,10 @@
     rgb(243, 240, 240, 0.5),
     #f3f3f3
   );
+}
+
+@media screen and (max-width: 800px) {
+  .title h1 {
+    font-size: 32px;
+  }
 }

@@ -1,3 +1,5 @@
+/** @format */
+
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import header from "./header.module.css";
@@ -11,21 +13,21 @@ const Header = ({ children }) => {
 
   window.addEventListener("scroll", (e) => {
     const header = document.getElementById("header");
-    if (window.scrollY >= 150) {
+    if (window.innerWidth <= 700) {
+      header.style.backgroundColor = "var(--primaryColor)";
+    } else if (window.scrollY >= 150) {
       header.style.backgroundColor = "var(--primaryColor)";
     } else if (window.scrollY <= 334) {
       header.style.backgroundColor = "transparent";
     }
   });
 
-  // useEffect(() => {
-
-  //   return () => {
-  //     // cleanup
-  //   };
-  // }, [
-  // ]);
-  // function to hide and show nav links/set or update MobileView
+  window.addEventListener("load", () => {
+    const header = document.getElementById("header");
+    if (window.innerWidth <= 700) {
+      header.style.backgroundColor = "var(--primaryColor)";
+    }
+  });
 
   const checKViewSize = (e) => {
     if (window.innerWidth >= "984") {

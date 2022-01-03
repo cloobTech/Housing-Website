@@ -1,13 +1,30 @@
+/** @format */
+
 .container {
   display: flex;
   margin: 0 0 0.25rem 0;
   background-color: #f3f3f3;
-  justify-content: space-between;
+  justify-content: flex-start;
   color: #737373;
   padding: 0.5rem 0.25rem;
+  font-weight: 600;
 }
 
 .container div {
-  margin: 0 0 0.75rem 0;
-  background-color: red;
+  margin: 0 0.5rem 0.75rem 0;
+  overflow: scroll;
+}
+
+.container h4 {
+  margin: 0 0.5rem 0.75rem 0;
+  overflow: scroll;
+  width: 30%;
+}
+.container div:last-child {
+  margin-right: 0;
+  color: var(--secondaryColor);
+}
+
+.container div::-webkit-scrollbar {
+  display: none;
 }

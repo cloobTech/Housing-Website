@@ -1,3 +1,5 @@
+/** @format */
+
 .header {
   display: flex;
   color: #fff;
@@ -19,6 +21,7 @@
   height: 100%;
   align-items: center;
   position: relative;
+  transition: all 0.3s linear;
 }
 .logoLink {
   text-decoration: none;
@@ -77,6 +80,10 @@
 }
 
 @media screen and (max-width: 845px) {
+  .header {
+    min-height: 40px;
+  }
+
   .container,
   .nav,
   .ul {

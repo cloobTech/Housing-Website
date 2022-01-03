@@ -1,3 +1,5 @@
+/** @format */
+
 import React from "react";
 import row from "./row.module.css";
 
@@ -5,7 +7,7 @@ const Row = ({ title, address, price }) => {
   return (
     <div>
       <div className={row.container}>
-        <div>{title}</div>
+        <h4>{title}</h4>
         <div>{address}</div>
         <div>{price}</div>
       </div>

@@ -1,3 +1,5 @@
+/** @format */
+
 import React, { useState, useEffect } from "react";
 import watchlist from "./watch_list.module.css";
 import { useHistory } from "react-router-dom";
@@ -12,7 +14,7 @@ const Watch_List = ({ children }) => {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch("https://cloob-homes-default-rtdb.firebaseio.com/cloob-homes.json")
+    fetch("https://cloob-home-default-rtdb.firebaseio.com/cloob.json")
       .then((res) => res.json())
       .then((data) => {
         setIsLoading(false);
@@ -33,7 +35,7 @@ const Watch_List = ({ children }) => {
   }
 
   return (
-    <>
+    <div className={watchlist.container}>
       {children}
       <Table>
         {watchList.map((eachData) => {
@@ -50,7 +52,7 @@ const Watch_List = ({ children }) => {
           }
         })}
       </Table>
-    </>
+    </div>
   );
 };
 
